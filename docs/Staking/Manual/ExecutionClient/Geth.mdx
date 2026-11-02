@@ -60,21 +60,21 @@ To download the latest Geth release for Linux, extract the archive and clean up,
 ```bash
 RELEASE_URL="https://geth.ethereum.org/downloads"
 FILE="https://gethstore.blob.core.windows.net/builds/geth-linux-amd64[a-zA-Z0-9./?=_%:-]*.tar.gz"
-BINARIES_URL="$(curl -s $RELEASE_URL | grep -Eo $FILE | head -1)"
+BINARIES_URL="$(curl -s ${RELEASE_URL} | grep -Eo ${FILE} | head -1)"
 
-echo Downloading URL: $BINARIES_URL
+echo Downloading URL: ${BINARIES_URL}
 
-cd $HOME
-wget -O geth.tar.gz $BINARIES_URL
-tar -xzvf geth.tar.gz -C $HOME
+cd ${HOME}
+wget -O geth.tar.gz ${BINARIES_URL}
+tar -xzvf geth.tar.gz -C ${HOME}
 rm geth.tar.gz
-sudo mv $HOME/geth-* geth
+sudo mv ${HOME}/geth-* geth
 ```
 
 To install the binaries, type:
 
 ```bash
-sudo mv $HOME/geth/geth /usr/local/bin
+sudo mv ${HOME}/geth/geth /usr/local/bin
 ```
 
 </details>

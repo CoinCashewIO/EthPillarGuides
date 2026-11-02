@@ -64,33 +64,33 @@ Follow the procedure for your execution client:
 
 <summary>Option 1 - Downloading Binaries</summary>
 
-Run the following to automatically download the latest linux release, un-tar and cleanup.
+To download the latest Linux release, extract the archive and clean up, type:
 
 ```bash
-RELEASE_URL="https://api.github.com/repos/hyperledger/besu/releases/latest"
-TAG=$(curl -s $RELEASE_URL | jq -r .tag_name)
-BINARIES_URL="https://github.com/hyperledger/besu/releases/download/$TAG/besu-$TAG.tar.gz"
+RELEASE_URL="https://api.github.com/repos/besu-eth/besu/releases/latest"
+TAG=$(curl -s {$RELEASE_URL} | jq -r .tag_name)
+BINARIES_URL="https://github.com/hyperledger/besu/releases/download/${TAG}/besu-${TAG}.tar.gz"
 
-echo Downloading URL: $BINARIES_URL
+echo Downloading URL: ${BINARIES_URL}
 
-cd $HOME
-wget -O besu.tar.gz $BINARIES_URL
-tar -xzvf besu.tar.gz -C $HOME
+cd ${HOME}
+wget -O besu.tar.gz ${BINARIES_URL}
+tar -xzvf besu.tar.gz -C ${HOME}
 rm besu.tar.gz
-sudo mv $HOME/besu-${TAG} besu
+sudo mv ${HOME}/besu-${TAG} besu
 ```
 
-Stop the services.
+To stop the service, type:
 
 ```bash
 sudo systemctl stop execution.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart the service, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/besu
-sudo mv $HOME/besu /usr/local/bin/besu
+sudo mv ${HOME}/besu /usr/local/bin/besu
 sudo systemctl start execution.service
 ```
 
@@ -100,7 +100,7 @@ sudo systemctl start execution.service
 
 <summary>Option 2 - Compiling Source Code</summary>
 
-Build the binaries.
+To compile binaries, type:
 
 ```bash
 cd ~/git/besu
@@ -114,25 +114,25 @@ git checkout $latestTag
 ./gradlew installDist
 ```
 
-Verify Besu was properly built by checking the version.
+To verify that Besu compiled correctly, type:
 
 ```shell
 ./build/install/besu/bin/besu --version
 ```
 
-Sample output of a compatible version.
+The `besu --version` command displays otuput similar to:
 
 ```
 besu/v23.4.0/linux-x86_64/openjdk-java-17
 ```
 
-Stop the services.
+To stop the service, type:
 
 ```bash
 sudo systemctl stop execution.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart the service, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/besu
@@ -148,31 +148,31 @@ sudo systemctl start execution.service
 
 <summary>Option 1 - Downloading Binaries</summary>
 
-Run the following to automatically download the latest linux release, un-tar and cleanup.
+To download the latest Linux release, extract the archive and clean up, type:
 
 ```bash
 RELEASE_URL="https://api.github.com/repos/erigontech/erigon/releases/latest"
-BINARIES_URL="$(curl -s $RELEASE_URL | jq -r ".assets[] | select(.name) | .browser_download_url" | grep linux_amd64.tar.gz)"
+BINARIES_URL="$(curl -s ${RELEASE_URL} | jq -r ".assets[] | select(.name) | .browser_download_url" | grep linux_amd64.tar.gz)"
 
-echo Downloading URL: $BINARIES_URL
+echo Downloading URL: ${BINARIES_URL}
 
 cd $HOME
-wget -O erigon.tar.gz $BINARIES_URL
-tar -xzvf erigon.tar.gz -C $HOME
+wget -O erigon.tar.gz ${BINARIES_URL}
+tar -xzvf erigon.tar.gz -C ${HOME}
 mv erigon_* erigon
 ```
 
-Stop the services.
+To stop the service, type:
 
 ```bash
 sudo systemctl stop execution.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart the service, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/erigon
-sudo mv $HOME/erigon/erigon /usr/local/bin/erigon
+sudo mv ${HOME}/erigon/erigon /usr/local/bin/erigon
 sudo systemctl start execution.service
 rm -rf erigon/ erigon.tar.gz
 ```
@@ -183,7 +183,7 @@ rm -rf erigon/ erigon.tar.gz
 
 <summary>Option 2 - Compiling Source Code</summary>
 
-Build the binary.
+To compile binaries, type:
 
 ```bash
 cd $HOME/git/erigon
@@ -195,13 +195,13 @@ git checkout $latestTag
 make erigon
 ```
 
-Stop the services.
+To stop the service, type:
 
 ```bash
 sudo systemctl stop execution.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart the service, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/erigon
@@ -217,28 +217,30 @@ sudo systemctl start execution.service
 
 <summary>Option 1 - Downloading Binaries</summary>
 
+To download the latest Linux release, extract the archive and clean up, type:
+
 ```bash
 RELEASE_URL="https://geth.ethereum.org/downloads"
 FILE="https://gethstore.blob.core.windows.net/builds/geth-linux-amd64[a-zA-Z0-9./?=_%:-]*.tar.gz"
-BINARIES_URL="$(curl -s $RELEASE_URL | grep -Eo $FILE | head -1)"
+BINARIES_URL="$(curl -s ${RELEASE_URL} | grep -Eo ${FILE} | head -1)"
 
-echo Downloading URL: $BINARIES_URL
+echo Downloading URL: ${BINARIES_URL}
 
 cd $HOME
-wget -O geth.tar.gz $BINARIES_URL
-tar -xzvf geth.tar.gz -C $HOME --strip-components=1
+wget -O geth.tar.gz ${BINARIES_URL}
+tar -xzvf geth.tar.gz -C ${HOME} --strip-components=1
 ```
 
-Stop the services.
+To stop the service, type:
 
 ```bash
 sudo systemctl stop execution.service
 ```
 
-Install new binaries, restart the services and cleanup files.
+To install new binaries, restart the service and clean up files, type:
 
 ```bash
-sudo mv $HOME/geth /usr/local/bin
+sudo mv ${HOME}/geth /usr/local/bin
 sudo systemctl start execution.service
 rm geth.tar.gz COPYING
 ```
@@ -249,7 +251,7 @@ rm geth.tar.gz COPYING
 
 <summary>Option 2 - Compiling Source Code</summary>
 
-Build the binary.
+To compile binaries, type:
 
 ```bash
 cd $HOME/git/go-ethereum
@@ -263,13 +265,13 @@ git checkout $latestTag
 make geth
 ```
 
-Stop the services.
+To stop the service, type:
 
 ```bash
 sudo systemctl stop execution.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart the service, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/geth
@@ -285,31 +287,31 @@ sudo systemctl start execution.service
 
 <summary>Option 1 - Downloading Binaries</summary>
 
-Run the following to automatically download the latest linux release, un-zip and cleanup.
+To download the latest Linux release, extract the archive and clean up, type:
 
 ```bash
 RELEASE_URL="https://api.github.com/repos/NethermindEth/nethermind/releases/latest"
-BINARIES_URL="$(curl -s $RELEASE_URL | jq -r ".assets[] | select(.name) | .browser_download_url" | grep linux-x64)"
+BINARIES_URL="$(curl -s ${RELEASE_URL} | jq -r ".assets[] | select(.name) | .browser_download_url" | grep linux-x64)"
 
-echo Downloading URL: $BINARIES_URL
+echo Downloading URL: ${BINARIES_URL}
 
-cd $HOME
-wget -O nethermind.zip $BINARIES_URL
-unzip -o nethermind.zip -d $HOME/nethermind
+cd ${HOME}
+wget -O nethermind.zip ${BINARIES_URL}
+unzip -o nethermind.zip -d ${HOME}/nethermind
 rm nethermind.zip
 ```
 
-Stop the services.
+To stop the service, type:
 
 ```bash
 sudo systemctl stop execution.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart the service, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/nethermind
-sudo mv $HOME/nethermind /usr/local/bin/nethermind
+sudo mv ${HOME}/nethermind /usr/local/bin/nethermind
 sudo systemctl start execution.service
 ```
 
@@ -319,7 +321,7 @@ sudo systemctl start execution.service
 
 <summary>Option 2 - Compiling Source Code</summary>
 
-Build the binaries.
+To compile binaries, type:
 
 ```bash
 cd ~/git/nethermind
@@ -333,13 +335,13 @@ git checkout $latestTag
 dotnet publish src/Nethermind/Nethermind.Runner -c release -o nethermind
 ```
 
-Verify Nethermind was properly built by checking the version.
+To verify that Nethermind compiled successfully, type:
 
 ```shell
 ./nethermind/nethermind --version
 ```
 
-Sample output of a compatible version.
+The `nethermind --version` command displays output similar to:
 
 ```
 Version: 1.25.2+78c7bf5f
@@ -349,13 +351,13 @@ OS: Linux x64
 Runtime: .NET 8.0.1
 ```
 
-Stop the services.
+To stop the service, type:
 
 ```bash
 sudo systemctl stop execution.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart the service, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/nethermind
@@ -365,41 +367,37 @@ sudo systemctl start execution.service
 
 </details>
 
-
-
-
-
 ### Reth
 
 <details>
 
 <summary>Option 1 - Downloading Binaries</summary>
 
-Run the following to automatically download the latest linux release, un-tar and cleanup.
+To download the latest Linux release, extract the archive and clean up, type:
 
 ```bash
 RELEASE_URL="https://api.github.com/repos/paradigmxyz/reth/releases/latest"
-BINARIES_URL="$(curl -s $RELEASE_URL | jq -r '.assets[] | select(.name | startswith ("reth")) | .browser_download_url' | grep x86_64-unknown-linux-gnu.tar.gz$)"
+BINARIES_URL="$(curl -s ${RELEASE_URL} | jq -r '.assets[] | select(.name | startswith ("reth")) | .browser_download_url' | grep x86_64-unknown-linux-gnu.tar.gz$)"
 
-echo Downloading URL: $BINARIES_URL
+echo Downloading URL: ${BINARIES_URL}
 
-cd $HOME
-wget -O reth.tar.gz $BINARIES_URL
-tar -xzvf reth.tar.gz -C $HOME
+cd ${HOME}
+wget -O reth.tar.gz ${BINARIES_URL}
+tar -xzvf reth.tar.gz -C ${HOME}
 rm reth.tar.gz
 ```
 
-Stop the services.
+To stop the service, type:
 
 ```bash
 sudo systemctl stop execution.service
 ```
 
-Remove old binaries, install new binaries, display the version, and restart the services.
+To remove old binaries, install new binaries, display the version and restart the service, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/reth
-sudo mv $HOME/reth /usr/local/bin
+sudo mv ${HOME}/reth /usr/local/bin
 reth --version
 sudo systemctl restart execution.service
 ```
@@ -410,7 +408,7 @@ sudo systemctl restart execution.service
 
 <summary>Option 2 - Compiling Source Code</summary>
 
-Build the binaries.
+To compile binaries, type:
 
 ```bash
 cd ~/git/reth
@@ -423,13 +421,13 @@ git checkout $latestTag
 cargo build --release --features jemalloc
 ```
 
-Verify Reth was built properly by checking the version number.
+To verify that Reth compiled successfully, type:
 
 ```bash
 ~/git/reth/target/release/reth --version
 ```
 
-In case of compilation errors, run the following sequence.
+In case of compilation errors, type:
 
 ```bash
 rustup update
@@ -437,13 +435,13 @@ cargo clean
 cargo build --release --features jemalloc
 ```
 
-Stop the services.
+To stop the service, type:
 
 ```bash
 sudo systemctl stop execution.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart the service, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/reth

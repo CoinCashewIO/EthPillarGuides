@@ -65,20 +65,20 @@ To download the latest Nethermind release for Linux, extract the archive and cle
 
 ```bash
 RELEASE_URL="https://api.github.com/repos/NethermindEth/nethermind/releases/latest"
-BINARIES_URL="$(curl -s $RELEASE_URL | jq -r ".assets[] | select(.name) | .browser_download_url" | grep linux-x64)"
+BINARIES_URL="$(curl -s ${RELEASE_URL} | jq -r ".assets[] | select(.name) | .browser_download_url" | grep linux-x64)"
 
-echo Downloading URL: $BINARIES_URL
+echo Downloading URL: ${BINARIES_URL}
 
-cd $HOME
-wget -O nethermind.zip $BINARIES_URL
-unzip -o nethermind.zip -d $HOME/nethermind
+cd ${HOME}
+wget -O nethermind.zip ${BINARIES_URL}
+unzip -o nethermind.zip -d ${HOME}/nethermind
 rm nethermind.zip
 ```
 
 To install the binaries, type:
 
 ```bash
-sudo mv $HOME/nethermind /usr/local/bin/nethermind
+sudo mv ${HOME}/nethermind /usr/local/bin/nethermind
 ```
 
 </details>

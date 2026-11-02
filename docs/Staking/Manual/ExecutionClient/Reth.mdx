@@ -65,20 +65,20 @@ To download the latest Reth release for Linux, extract the archive and clean up,
 
 ```bash
 RELEASE_URL="https://api.github.com/repos/paradigmxyz/reth/releases/latest"
-BINARIES_URL="$(curl -s $RELEASE_URL | jq -r '.assets[] | select(.name | startswith ("reth")) | .browser_download_url' | grep x86_64-unknown-linux-gnu.tar.gz$)"
+BINARIES_URL="$(curl -s ${RELEASE_URL} | jq -r '.assets[] | select(.name | startswith ("reth")) | .browser_download_url' | grep x86_64-unknown-linux-gnu.tar.gz$)"
 
-echo Downloading URL: $BINARIES_URL
+echo Downloading URL: ${BINARIES_URL}
 
-cd $HOME
-wget -O reth.tar.gz $BINARIES_URL
-tar -xzvf reth.tar.gz -C $HOME
+cd ${HOME}
+wget -O reth.tar.gz ${BINARIES_URL}
+tar -xzvf reth.tar.gz -C ${HOME}
 rm reth.tar.gz
 ```
 
 To install the binaries, type:
 
 ```bash
-sudo mv $HOME/reth /usr/local/bin
+sudo mv ${HOME}/reth /usr/local/bin
 ```
 
 </details>
