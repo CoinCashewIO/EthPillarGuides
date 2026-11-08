@@ -34,7 +34,7 @@ For more details, see:
 
 * **Web Site**—[Teku](https://consensys.io/teku)
 * **Documentation**—[Introduction](https://docs.teku.consensys.net/introduction)
-* **Releases**—[GitHub](https://github.com/ConsenSys/teku/releases)
+* **Releases**—[GitHub](https://github.com/Consensys-Incorporated/teku)
 
 ## 1. Initial Configuration
 
@@ -63,7 +63,7 @@ While downloading binaries is often faster and more convenient, building from so
 To download the latest Teku release for Linux, extract the archive and clean up, type the following commands:
 
 ```bash
-RELEASE_URL="https://api.github.com/repos/ConsenSys/teku/releases/latest"
+RELEASE_URL="https://api.github.com/repos/Consensys-Incorporated/teku/releases/latest"
 LATEST_TAG="$(curl -s $RELEASE_URL | jq -r ".tag_name")"
 BINARIES_URL="https://artifacts.consensys.net/public/teku/raw/names/teku.tar.gz/versions/${LATEST_TAG}/teku-${LATEST_TAG}.tar.gz"
 
@@ -97,11 +97,11 @@ To build the binaries, type:
 ```bash
 mkdir -p ~/git
 cd ~/git
-git clone https://github.com/ConsenSys/teku.git
+git clone https://github.com/Consensys-Incorporated/teku
 cd teku
 # Get new tags
 git fetch --tags
-RELEASETAG=$(curl -s https://api.github.com/repos/ConsenSys/teku/releases/latest | jq -r .tag_name)
+RELEASETAG=$(curl -s https://api.github.com/repos/Consensys-Incorporated/teku/releases/latest | jq -r .tag_name)
 git checkout tags/$RELEASETAG
 ./gradlew distTar installDist
 ```

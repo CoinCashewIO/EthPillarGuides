@@ -43,9 +43,7 @@ import TabItem from '@theme/TabItem';
 
 ## :fast_forward: Updating Manually
 
-When a new release is cut, you will want to update to the latest stable release. The following shows you how to update your beacon chain and validator.
-
-When a new consensus client release is available, update to the latest stable version.
+When a new consensus client release is available, update to the latest stable version. The following procedures show you how to update your beacon node and validator client.
 
 Prior to updating, always review release notes. Changes may require your attention.
 
@@ -53,7 +51,7 @@ Prior to updating, always review release notes. Changes may require your attenti
 * [Lodestar](https://github.com/ChainSafe/lodestar/releases)
 * [Nimbus](https://github.com/status-im/nimbus-eth2/releases)
 * [Prysm](https://github.com/OffchainLabs/prysm/releases)
-* [Teku](https://github.com/ConsenSys/teku/releases)
+* [Teku](https://github.com/Consensys-Incorporated/teku)
 
 Follow the procedure for your consensus client:
 
@@ -82,7 +80,7 @@ cd $HOME
 wget -O lighthouse.tar.gz $BINARIES_URL
 # Untar
 tar -xzvf lighthouse.tar.gz -C $HOME
-# Cleanup
+# Clean up
 rm lighthouse.tar.gz
 ```
 
@@ -181,7 +179,7 @@ cd $HOME
 wget -O lodestar.tar.gz $BINARIES_URL
 # Untar
 tar -xzvf lodestar.tar.gz -C $HOME
-# Cleanup
+# Clean up
 rm lodestar.tar.gz
 ```
 
@@ -271,7 +269,7 @@ wget -O nimbus.tar.gz $BINARIES_URL
 tar -xzvf nimbus.tar.gz -C $HOME
 # Rename folder
 mv nimbus-eth2_Linux_amd64_* nimbus
-# Cleanup
+# Clean up
 rm nimbus.tar.gz
 ```
 
@@ -279,7 +277,7 @@ To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service
-# If running standalone Nimbus Validator
+# If running a standalone Nimbus validator
 sudo systemctl stop validator.service
 ```
 
@@ -292,12 +290,12 @@ sudo mv nimbus/build/nimbus_beacon_node /usr/local/bin
 sudo mv nimbus/build/nimbus_validator_client /usr/local/bin
 rm -r nimbus
 sudo systemctl start consensus.service
-# If running standalone Nimbus Validator
+# If running a standalone Nimbus validator
 sudo systemctl start validator.service
 ```
 
 :::note
-If you configure Nimbus to use a combined beacon node and validator client, then there is no `validator.service` file.
+If you configure Nimbus to use a combined beacon node and validator client, then the `validator.service` file does not exist.
 :::
 
 </details>
@@ -327,7 +325,7 @@ To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service
-# If running standalone Nimbus Validator
+# If running a standalone Nimbus validator
 sudo systemctl stop validator.service
 ```
 
@@ -339,12 +337,12 @@ sudo rm /usr/local/bin/nimbus_validator_client
 sudo cp $HOME/git/nimbus-eth2/build/nimbus_beacon_node /usr/local/bin
 sudo cp $HOME/git/nimbus-eth2/build/nimbus_validator_client /usr/local/bin
 sudo systemctl start consensus.service
-# If running standalone Nimbus Validator
+# If running a standalone Nimbus validator
 sudo systemctl start validator.service
 ```
 
 :::note
-If you configure Nimbus to use a combined beacon node and validator client, then there is no `validator.service` file.
+If you configure Nimbus to use a combined beacon node and validator client, then the `validator.service` file does not exist.
 :::
 
 </details>
@@ -426,7 +424,7 @@ sudo systemctl start consensus.service validator.service
 To download the latest Linux release, extract the archive and clean up, type:
 
 ```bash
-RELEASE_URL="https://api.github.com/repos/ConsenSys/teku/releases/latest"
+RELEASE_URL="https://api.github.com/repos/Consensys-Incorporated/teku/releases/latest"
 LATEST_TAG="$(curl -s $RELEASE_URL | jq -r ".tag_name")"
 BINARIES_URL="https://artifacts.consensys.net/public/teku/raw/names/teku.tar.gz/versions/${LATEST_TAG}/teku-${LATEST_TAG}.tar.gz"
 echo Downloading URL: $BINARIES_URL
@@ -438,7 +436,7 @@ wget -O teku.tar.gz $BINARIES_URL
 tar -xzvf teku.tar.gz -C $HOME
 # Rename folder
 mv teku-${LATEST_TAG} teku
-# Cleanup
+# Clean up
 rm teku.tar.gz
 ```
 
@@ -447,7 +445,7 @@ To stop services, type:
 ```bash
 sudo systemctl stop consensus.service
 
-# If running Standalone Teku Validator
+# If running a standalone Teku validator
 sudo systemctl stop validator.service
 ```
 
@@ -458,7 +456,7 @@ sudo rm -rf /usr/local/bin/teku
 sudo mv $HOME/teku /usr/local/bin/teku
 sudo systemctl start consensus.service
 
-# If running Standalone Teku Validator
+# If running a standalone Teku validator
 sudo systemctl start validator.service
 ```
 
@@ -474,7 +472,7 @@ To download the latest source code and compile binaries, type:
 cd ~/git/teku
 # Get new tags
 git fetch --tags
-RELEASETAG=$(curl -s https://api.github.com/repos/ConsenSys/teku/releases/latest | jq -r .tag_name)
+RELEASETAG=$(curl -s https://api.github.com/repos/Consensys-Incorporated/teku/releases/latest | jq -r .tag_name)
 git checkout tags/$RELEASETAG
 ./gradlew distTar installDist
 ```
@@ -491,7 +489,7 @@ To stop services, type:
 ```bash
 sudo systemctl stop consensus.service
 
-# If running Standalone Teku Validator
+# If running a standalone Teku validator
 sudo systemctl stop validator.service
 ```
 
@@ -502,7 +500,7 @@ sudo rm -rf /usr/local/bin/teku
 sudo cp -a $HOME/git/teku/build/install/teku /usr/local/bin/teku
 sudo systemctl start consensus.service
 
-# If running Standalone Teku Validator
+# If running a standalone Teku validator
 sudo systemctl start validator.service
 ```
 
