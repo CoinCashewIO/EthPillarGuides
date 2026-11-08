@@ -23,3 +23,94 @@ export function HTMLContent() {
 
 {/* <!-- <HTMLContent /> --> */}
 
+When you are changing clients, moving to a new node or retiring a staking node, you may need to uninstall the execution, consensus and/or validator clients.
+
+## Uninstalling an Execution Client
+
+```bash
+sudo systemctl stop execution.service
+sudo systemctl disable execution.service
+sudo rm /etc/systemd/system/execution.service
+
+# Besu
+sudo rm -rf /usr/local/bin/besu
+sudo rm -rf /var/lib/besu
+
+# Erigon
+sudo rm -rf /usr/local/bin/erigon
+sudo rm -rf /var/lib/erigon
+
+# Geth
+sudo rm -rf /usr/local/bin/geth
+sudo rm -rf /var/lib/geth
+
+# Nethermind
+sudo rm -rf /usr/local/bin/nethermind
+sudo rm -rf /var/lib/nethermind
+
+# Reth
+sudo rm -rf /usr/local/bin/reth
+sudo rm -rf /var/lib/reth
+
+sudo userdel execution
+```
+
+## Uninstalling a Consensus Client
+
+```bash
+sudo systemctl stop consensus.service
+sudo systemctl disable consensus.service
+sudo rm /etc/systemd/system/consensus.service
+
+# Lighthouse
+sudo rm -rf /usr/local/bin/lighthouse
+sudo rm -rf /var/lib/lighthouse
+
+# Lodestar
+sudo rm -rf /usr/local/bin/lodestar
+sudo rm -rf /var/lib/lodestar
+
+# Nimbus
+sudo rm -rf /usr/local/bin/nimbus_beacon_node
+sudo rm -rf /var/lib/nimbus
+
+# Prysm
+sudo rm -rf /usr/local/bin/beacon-chain
+sudo rm -rf /var/lib/prysm
+
+# Teku
+sudo rm -rf /usr/local/bin/teku
+sudo rm -rf /var/lib/teku
+
+sudo userdel consensus
+```
+
+## Uninstalling a Validator Client
+
+```bash
+sudo systemctl stop validator.service
+sudo systemctl disable validator.service
+sudo rm /etc/systemd/system/validator.service
+
+# Lighthouse
+sudo rm -rf /var/lib/lighthouse_validator
+sudo rm -rf /var/lib/lighthouse/validators
+
+# Lodestar
+sudo rm -rf /var/lib/lodestar_validator
+sudo rm -rf /var/lib/lodestar/validators
+
+# If running a standalone Nimbus validator
+sudo rm -rf /var/lib/nimbus_validator
+sudo rm -rf /usr/local/bin/nimbus_validator_client
+
+# Prysm
+sudo rm -rf /usr/local/bin/validator
+sudo rm -rf /var/lib/prysm/validators
+
+# If running a standalone Teku validator
+sudo rm -rf /var/lib/teku_validator
+
+sudo userdel validator
+```
+
