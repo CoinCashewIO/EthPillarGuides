@@ -69,7 +69,7 @@ Follow the procedure for your consensus client:
 
 <summary>Option 1 - Downloading Binaries</summary>
 
-Run the following to automatically download the latest linux release, un-tar and cleanup.
+To download the latest Linux release, extract the archive and clean up, type:
 
 ```bash
 RELEASE_URL="https://api.github.com/repos/sigp/lighthouse/releases/latest"
@@ -86,13 +86,13 @@ tar -xzvf lighthouse.tar.gz -C $HOME
 rm lighthouse.tar.gz
 ```
 
-Stop the services.
+To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service validator.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart services, type:
 
 ```bash
 sudo rm /usr/local/bin/lighthouse
@@ -106,23 +106,32 @@ sudo systemctl start consensus.service validator.service
 
 <summary>Option 2 - Compiling Source Code</summary>
 
-Build the binaries.
+To download the latest source code, type:
 
 ```bash
 cd ~/git/lighthouse
 git fetch --all && git checkout stable && git pull
+```
+
+To compile binaries, type:
+
+```bash
 make
 ```
 
-:bulb:**Tip**: Improve some Lighthouse benchmarks by around 20% at the expense of increased compile time? Use `maxperf` profile.
+<center><strong>OR</strong></center>
 
-* To compile with maxperf, replace the above `make` command with
+To compile binaries using the `maxperf` profile, type:
 
 ```bash
 PROFILE=maxperf make
 ```
 
-In case of compilation errors, run the following sequence.
+:::note
+While increasing compile time, using the `maxperf` profile improves some Lighthouse benchmarks by about 20 percent.
+:::
+
+In case of compilation errors, type:
 
 ```bash
 rustup update
@@ -130,19 +139,19 @@ cargo clean
 make
 ```
 
-Verify lighthouse was built properly by checking the version number.
+To verify that Lighthouse compiled correctly, type:
 
 ```
 lighthouse --version
 ```
 
-Stop the services.
+To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service validator.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart services, type:
 
 ```bash
 sudo rm /usr/local/bin/lighthouse
@@ -158,7 +167,7 @@ sudo systemctl start consensus.service validator.service
 
 <summary>Option 1 - Downloading Binaries</summary>
 
-Run the following to automatically download the latest linux release, un-tar and cleanup.
+To download the latest Linux release, extract the archive and clean up, type:
 
 ```bash
 RELEASE_URL="https://api.github.com/repos/ChainSafe/lodestar/releases/latest"
@@ -176,13 +185,13 @@ tar -xzvf lodestar.tar.gz -C $HOME
 rm lodestar.tar.gz
 ```
 
-Stop the services.
+To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service validator.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart services, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/lodestar && sudo mkdir -p /usr/local/bin/lodestar
@@ -196,7 +205,7 @@ sudo systemctl start consensus.service validator.service
 
 <summary>Option 2 - Compiling Source Code</summary>
 
-Pull the latest source and build Lodestar.
+To download the latest source code and compile binaries, type:
 
 ```bash
 cd ~/git/lodestar
@@ -205,19 +214,19 @@ yarn install
 yarn run build
 ```
 
-:warning: In case of build errors or missing dependencies, run the following command.
+In case of compilation errors, type:
 
 ```bash
 yarn clean:nm && yarn install
 ```
 
-Verify Lodestar was installed properly by displaying the version.
+To verify that Lodestar compiled correctly, type:
 
 ```bash
 ./lodestar --version
 ```
 
-Sample output of a compatible version.
+The `lodestar --version` command displays output similar to:
 
 ```
 🌟 Lodestar: TypeScript Implementation of the Ethereum Consensus Beacon Chain.
@@ -225,13 +234,13 @@ Sample output of a compatible version.
   * by ChainSafe Systems, 2018-2022
 ```
 
-Stop the services.
+To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service validator.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart services, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/lodestar
@@ -247,7 +256,7 @@ sudo systemctl start consensus.service validator.service
 
 <summary>Option 1 - Downloading Binaries</summary>
 
-Run the following to automatically download the latest linux release, un-tar and cleanup.
+To download the latest Linux release, extract the archive and clean up, type:
 
 ```bash
 RELEASE_URL="https://api.github.com/repos/status-im/nimbus-eth2/releases/latest"
@@ -266,7 +275,7 @@ mv nimbus-eth2_Linux_amd64_* nimbus
 rm nimbus.tar.gz
 ```
 
-Stop the services.
+To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service
@@ -274,7 +283,7 @@ sudo systemctl stop consensus.service
 sudo systemctl stop validator.service
 ```
 
-Remove old binaries, install new binaries, cleanup and restart the services.
+To remove old binaries, install new binaries, clean up and restart services, type:
 
 ```bash
 sudo rm /usr/local/bin/nimbus_beacon_node
@@ -288,7 +297,7 @@ sudo systemctl start validator.service
 ```
 
 :::note
-In combined CL+VC Nimbus configuration, there will be no `validator.service` file.
+If you configure Nimbus to use a combined beacon node and validator client, then there is no `validator.service` file.
 :::
 
 </details>
@@ -297,23 +306,24 @@ In combined CL+VC Nimbus configuration, there will be no `validator.service` fil
 
 <summary>Option 2 - Compiling Source Code</summary>
 
-Pull the latest source code and build the binary.
+To download the latest source code and compile binaries, type:
 
-```bashcd ~/git/nimbus-eth2
-git checkout stable &#x26;&#x26; git pull
+```bash
+cd ~/git/nimbus-eth2
+git checkout stable && git pull
 make -j$(nproc) update
 make -j$(nproc) nimbus_beacon_node
 make -j$(nproc) nimbus_validator_client
 ```
 
-Verify Nimbus was built properly by displaying the version.
+To verify that Nimbus compiled correctly, type:
 
 ```bash
 cd $HOME/git/nimbus-eth2/build
 ./nimbus_beacon_node --version
 ```
 
-Stop the services.
+To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service
@@ -321,7 +331,7 @@ sudo systemctl stop consensus.service
 sudo systemctl stop validator.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries, clean up and restart services, type:
 
 ```bash
 sudo rm /usr/local/bin/nimbus_beacon_node
@@ -334,7 +344,7 @@ sudo systemctl start validator.service
 ```
 
 :::note
-In combined CL+VC Nimbus configuration, there will be no `validator.service` file.
+If you configure Nimbus to use a combined beacon node and validator client, then there is no `validator.service` file.
 :::
 
 </details>
@@ -345,7 +355,7 @@ In combined CL+VC Nimbus configuration, there will be no `validator.service` fil
 
 <summary>Option 1 - Downloading Binaries</summary>
 
-Run the following to automatically download the latest binaries.
+To download the latest binaries, type:
 
 ```bash
 cd $HOME
@@ -357,13 +367,13 @@ curl -f -L "https://prysmaticlabs.com/releases/${file_validator}" -o validator
 chmod +x beacon-chain validator
 ```
 
-Stop the services.
+To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service validator.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart services, type:
 
 ```bash
 sudo rm /usr/local/bin/beacon-chain
@@ -378,7 +388,7 @@ sudo systemctl start consensus.service validator.service
 
 <summary>Option 2 - Compiling Source Code</summary>
 
-Pull the latest source code and build the binaries.
+To download the latest source code and compile binaries, type:
 
 ```bash
 cd $HOME/git/prysm
@@ -389,13 +399,13 @@ go build -o=./build/beacon-chain ./cmd/beacon-chain
 go build -o=./build/validator ./cmd/validator
 ```
 
-Stop the services.
+To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service validator.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart services, type:
 
 ```bash
 sudo rm /usr/local/bin/beacon-chain
@@ -413,7 +423,7 @@ sudo systemctl start consensus.service validator.service
 
 <summary>Option 1 - Downloading Binaries</summary>
 
-Run the following to automatically download the latest linux release, un-tar and cleanup.
+To download the latest Linux release, extract the archive and clean up, type:
 
 ```bash
 RELEASE_URL="https://api.github.com/repos/ConsenSys/teku/releases/latest"
@@ -432,7 +442,7 @@ mv teku-${LATEST_TAG} teku
 rm teku.tar.gz
 ```
 
-Stop the services.
+To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service
@@ -441,7 +451,7 @@ sudo systemctl stop consensus.service
 sudo systemctl stop validator.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart services, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/teku
@@ -458,7 +468,7 @@ sudo systemctl start validator.service
 
 <summary>Option 2 - Compiling Source Code</summary>
 
-Fetch the latest tags and build the binaries.
+To download the latest source code and compile binaries, type:
 
 ```bash
 cd ~/git/teku
@@ -469,14 +479,14 @@ git checkout tags/$RELEASETAG
 ./gradlew distTar installDist
 ```
 
-Verify Teku was built properly by displaying the version.
+To verify that Teku compiled correctly, type:
 
 ```shell
 cd $HOME/git/teku/build/install/teku/bin
 ./teku --version
 ```
 
-Stop the services.
+To stop services, type:
 
 ```bash
 sudo systemctl stop consensus.service
@@ -485,7 +495,7 @@ sudo systemctl stop consensus.service
 sudo systemctl stop validator.service
 ```
 
-Remove old binaries, install new binaries and restart the services.
+To remove old binaries, install new binaries and restart services, type:
 
 ```bash
 sudo rm -rf /usr/local/bin/teku
@@ -501,9 +511,9 @@ sudo systemctl start validator.service
 ### Verifying Services and Logs
 
 <Tabs>
-<TabItem value="x" label="Lighthouse | Prysm | Lodestar | Nimbus | Teku" >
+<TabItem value="x" label="Standalone Beacon Node" >
 ```bash
-# Verify services status
+# Verify service status
 sudo systemctl status consensus.service validator.service
 ```
 
@@ -517,9 +527,9 @@ sudo journalctl -fu validator.service
 ```
 </TabItem>
 
-<TabItem value="xx" label="Combined BN+VC for Nimbus | Teku" >
+<TabItem value="xx" label="Combined Beacon Node and Validator Client" >
 ```bash
-# Check services status
+# Verify service status
 sudo systemctl status consensus.service 
 ```
 
