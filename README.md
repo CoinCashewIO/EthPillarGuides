@@ -8,61 +8,56 @@
 
 <ul>
   <li>Install Node.js and Docusaurus</li>
-  <li>Download the GitHub repository</li>
+  <li>Download the GitHub repository for the EthPillar guides</li>
   <li>Install and configure the Visual Studio Code editor</li>
 </ul>
 
 <h2>Installing Node.js</h2>
 
-      <p>Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a Web browser.</p>
+<p>Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a Web browser.</p>
 
-      <p class="pi">To install Node.js:</p>
+<p class="pi">To install Node.js:</p>
 
-      <ul class="ss">
-        <li>Using a Web browser, visit the <a href="https://nodejs.org/en/download/" target="_blank">Download Node.js</a> page. In the dropdown fields, select a Node.js Long-Term Support (LTS) version 18.0 or above for your operating system using <b>nvm</b> with <b>npm</b>, and then follow the instructions that the Download page displays.<center><strong>OR</strong></center>Download a prebuilt Node.js installer for your operating system, then run then installer, and then follow the instructions on screen to complete the installation.</li>
-      </ul>
+<ul class="ss">
+  <li>Using a Web browser, visit the <a href="https://nodejs.org/en/download/" target="_blank">Download Node.js</a> page. In the dropdown fields, select a Node.js Long-Term Support (LTS) version 18.0 or above for your operating system using <b>nvm</b> with <b>npm</b>, and then follow the instructions that the Download page displays.<center><strong>OR</strong></center>Download a prebuilt Node.js installer for your operating system, then run then installer, and then follow the instructions on screen to complete the installation.</li>
+</ul>
 
-      <h2>Installing and Starting Docusaurus</h2>
+<h2>Installing and Starting Docusaurus</h2>
 
-      <p>The simplest method of installing Docusaurus involves creating a new project Web site using a default template.</p>
+<p>The simplest method of installing Docusaurus involves creating a new project Web site using a default template.</p>
 
-      <p class="pi">To install Docusaurus:</p>
+<p class="pi">To install Docusaurus:</p>
 
-      <ol>
-        <li>Using a terminal window, navigate to the folder where you want to store Docusaurus project Web sites, such as the <i>How to Set Up a Cardano Stake Pool</i> guide.</li>
-        <li>To create a new Docusaurus project Web site, type the following command where <code>&lt;WebsiteName&gt;</code> is the name of the new project: <code>npx create-docusaurus@latest &lt;WebsiteName&gt; classic</code>
-        <table class="box">
-          <tbody>
-            <tr>
-              <td class="boxLabel"><p class="boxLabel">Note<br /><img src={useBaseUrl('img/BoxNote.png')} alt="Note" /></p></td>
-              <td class="boxText"><p class="boxText">For example, name the new project <code>test</code></p></td>
-            </tr>
-          </tbody>
-        </table></li>
-        <li>When prompted to install the <code>create-docusaurus</code> package, type <code>y</code> and then press <code>ENTER</code>to proceed.</li>
-        <li>When prompted to select a language, select <code>JavaScript</code> and then press <code>ENTER</code></li>
-        <li>When the installation completes, to start the development server for the new project Web site, type:
-          <CodeBlock language="bash">
-            {`cd ./<WebsiteName>
+<ol>
+  <li>Using a terminal window, navigate to the folder where you want to store Docusaurus project Web sites, such as the EthPillar guides.</li>
+  <li>To create a new Docusaurus project Web site, type the following command where <code>&lt;WebsiteName&gt;</code> is the name of the new project: <code>npx create-docusaurus@latest &lt;WebsiteName&gt; classic</code>
+    <table class="box">
+      <tbody>
+        <tr>
+          <td class="boxLabel"><p class="boxLabel">Note<br /><img src={useBaseUrl('img/BoxNote.png')} alt="Note" /></p></td>
+          <td class="boxText"><p class="boxText">For example, name the new project <code>test</code></p></td>
+        </tr>
+      </tbody>
+    </table></li>
+  <li>When prompted to install the <code>create-docusaurus</code> package, type <code>y</code> and then press <code>ENTER</code>to proceed.</li>
+  <li>When prompted to select a language, select <code>JavaScript</code> and then press <code>ENTER</code></li>
+  <li>When the installation completes, to start the development server for the new project Web site, type:
+    <CodeBlock language="bash">
+      {`cd ./<WebsiteName>
 npx docusaurus start`}
-          </CodeBlock>
-        </li>
-      </ol>
+    </CodeBlock>
+  </li>
+</ol>
 
-      <p>The development server starts, and then compiles the Web site. The development server serves your Web site, allowing you to preview changes as you edit the files. When compiled successfully, your default Web browser opens displaying the Web site at <code>http://localhost:3000</code></p>
+<p>The development server starts, and then compiles the Web site. The development server serves your Web site, allowing you to preview changes as you edit the files. When compiled successfully, your default Web browser opens displaying the Web site at <code>http://localhost:3000</code></p>
         
-      <p>For details on the folders and files comprising a Docusaurus Web site, refer to the <a href="https://docusaurus.io/docs/installation#project-structure" target="_blank">Project Structure</a>.</p>
+<p>For details on the folders and files comprising a Docusaurus Web site, refer to the <a href="https://docusaurus.io/docs/installation#project-structure" target="_blank">Project Structure</a>.</p>
 
-      <p>Use the project that you create as a playground to learn how to use Docusaurus.</p>
+<p>Use the project that you create as a playground to learn how to use Docusaurus.</p>
 
-      <table class="box">
-        <tbody>
-          <tr>
-            <td class="boxLabel"><p class="boxLabel">Note<br /><img src={useBaseUrl('img/BoxNote.png')} alt="Note" /></p></td>
-            <td class="boxText"><p class="boxText">For more details on using Docusaurus, see the <a href="https://docusaurus.io/docs" target="_blank">documentation</a>.</p></td>
-          </tr>
-        </tbody>
-      </table>
+> [!NOTE]
+> For more details on using Docusaurus, see the [documentation](https://docusaurus.io/docs).
+
 
       <p class="pi">To stop the development server:</p>
 
