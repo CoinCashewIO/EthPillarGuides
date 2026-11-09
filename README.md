@@ -35,12 +35,8 @@
   </li>
   <li>When prompted to install the <code>create-docusaurus</code> package, type <code>y</code> and then press <code>ENTER</code>to proceed.</li>
   <li>When prompted to select a language, select <code>JavaScript</code> and then press <code>ENTER</code></li>
-  <li>When the installation completes, to start the development server for the new project Web site, type:
-    <code>
-cd ./&lt;WebsiteName&gt;
-npx docusaurus start
-    </code>
-  </li>
+  <li>When the installation completes, to start the development server for the new project Web site, type: <code>cd ./&lt;WebsiteName&gt;
+npx docusaurus start</code></li>
 </ol>
 
 <p>The development server starts, and then compiles the Web site. The development server serves your Web site, allowing you to preview changes as you edit the files. When compiled successfully, your default Web browser opens displaying the Web site at <code>http://localhost:3000</code></p>
