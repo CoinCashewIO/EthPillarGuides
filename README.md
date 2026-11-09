@@ -1,11 +1,8 @@
 <h1>Setting Up Your Workflow</h1>
 
-The Docusaurus development server allows you to preview and test revisions to EthPillar guides on your local computer using a Web browser.
-
-
 <p>EthPillar guides are created using <a href="https://docusaurus.io/" target="_blank">Docusaurus</a>, a project by <a href="https://opensource.fb.com/projects/docusaurus/" target="_blank">Meta Open Source</a> designed for building optimized Web sites quickly. Built using <a href="https://nodejs.org/en" target="_blank">Node.js<sup>®</sup></a> and <a href="https://react.dev/" target="_blank">React</a>, Docusaurus is platform agnostic.</p>
 
-<p>To edit the Guide, [CoinCashew.io](https://CoinCashew.io) recommends using the <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> source code editor.</p>
+<p>To edit the guides, <a href="https://CoinCashew.io" target="_blank">CoinCashew.io</a> recommends using the <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> source code editor.</p>
 
 <p>To set up a workflow for revising the EthPillar guides, you need to:</p>
 
