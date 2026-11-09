@@ -84,35 +84,23 @@ cd ./EthPillarGuides
 npm install
 npm update
 npm audit fix</code></li>
+  <li>To start the development server for the Guide, type <code>npx docusaurus start</code></li>
+  <li>When you are ready to stop the development server, navigate to the terminal window running the development server, and then press <code>CTRL+C</code></li>
+</ol>
 
+<p>When revising the EthPillar guides, you need to know about the following folders and files in the Docusaurus project, relative to the root <code>EthPillarGuides</code> folder:</p>
 
+<ul>
+  <li><code>/assets/</code>—Contains source files for images; scripts; and, snippets that you may use when revising the guides</li>
+  <li><code>/docs/</code>—Contains the content files for the guides</li>
+  <li><code>/src/css/custom.css</code>—Defines the Cascading Style Sheets (CSS) describing presentation and styling of the guides</li>
+  <li><code>/static/img/</code>—Contains image files that the guides use</li>
+</ul>
 
+> [!NOTE]
+> Specifying file paths relative to the root folder of the project is standard for Web sites created using Docusaurus.
 
-
-
-        <li>To start the development server for the Guide, type <code>npx docusaurus start</code></li>
-        <li>When you are ready to stop the development server, navigate to the terminal window running the development server, and then press <code>CTRL+C</code></li>
-      </ol>
-
-      <p>When revising the <i>How to Set Up a Cardano Stake Pool</i> guide, you need to know about the following folders and files in the Docusaurus project, relative to the root <code>CardanoSPOGuide</code> folder:</p>
-
-      <ul>
-        <li><code>/assets/</code>—Contains source files for images; scripts; and, snippets that you may use when revising the Guide</li>
-        <li><code>/docs/</code>—Contains the content files for the Guide</li>
-        <li><code>/src/css/custom.css</code>—Defines the Cascading Style Sheets (CSS) describing presentation and styling of the Guide</li>
-        <li><code>/static/img/</code>—Contains image files that the Guide uses</li>
-      </ul>
-
-      <table class="box">
-        <tbody>
-          <tr>
-            <td class="boxLabel"><p class="boxLabel">Note<br /><img src={useBaseUrl('img/BoxNote.png')} alt="Note" /></p></td>
-            <td class="boxText"><p class="boxText">Specifying file paths relative to the root folder of the project is standard for Web sites created using Docusaurus.</p></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p>For details on creating a pull request to submit content that you create to CoinCashew for publication in the Guide, see the topic <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork" target="_blank">Creating a Pull Request from a Fork</a>.</p>
+<p>For details on creating a pull request to submit content that you create to CoinCashew.io for publication in the guides, see the topic <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork" target="_blank">Creating a Pull Request from a Fork</a>.</p>
 
       <h2>Installing and Configuring Visual Studio Code</h2>
 
