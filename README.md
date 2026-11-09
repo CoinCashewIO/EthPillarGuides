@@ -59,7 +59,7 @@ npx docusaurus start</code></li>
 
 <h2>Downloading and Compiling EthPillar Guides</h2>
 
-<p>The <a href="https://github.com/CoinCashewIO/EthPillarGuides" target="_blank">EthPillarGuides</a> GitHub repository stores the source files for EthPillar guides—a fully open-source project fully powered by Ehtereum node operators like you.</p>
+<p>The <a href="https://github.com/CoinCashewIO/EthPillarGuides" target="_blank">EthPillarGuides</a> GitHub repository stores the source files for EthPillar guides—a fully open-source project fully powered by Ethereum node operators like you.</p>
 
 <p><strong>To download and compile the EthPillar guides:</strong></p>
 
