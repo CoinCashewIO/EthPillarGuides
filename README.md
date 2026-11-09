@@ -121,4 +121,4 @@ npm audit fix</code></li>
   </li>
 </ol>
 
-<p>For details on using VS Code to submit content that you create to your fork of the EthPillarGuides repository, see the section <a href="https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_staging-and-committing-code-changes" target="_blank">Staging and Committing Code Changes</a>.</p>
+<p>For details on using VS Code to submit content that you create to your fork of the EthPillarGuides repository, see the section <a href="https://code.visualstudio.com/docs/sourcecontrol/quickstart#_step-3-stage-and-commit" target="_blank">Stage and Commit</a>.</p>
