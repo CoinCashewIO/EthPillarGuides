@@ -37,8 +37,8 @@
   <li>When prompted to select a language, select <code>JavaScript</code> and then press <code>ENTER</code></li>
   <li>When the installation completes, to start the development server for the new project Web site, type:
     <code>
-      cd ./&lt;WebsiteName&gt;
-      npx docusaurus start
+cd ./&lt;WebsiteName&gt;
+npx docusaurus start
     </code>
   </li>
 </ol>
