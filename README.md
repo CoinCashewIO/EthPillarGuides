@@ -112,26 +112,13 @@ npm audit fix</code></li>
   <li>Visit <a href="https://code.visualstudio.com/docs/setup/setup-overview" target="_blank">Setting Up Visual Studio Code</a>, and then follow the instructions for your platform.</li>
   <li>After finishing the installation, open VS Code</li>
   <li>In VS Code, click the <b>File</b> menu, then click <b>Open Folder</b>, then navigate to the <b>EthPillarGuides</b> folder, and then click <b>Open</b></li>
-
-
-
-  
-        <li>To install HTML code snippets for the Guide:
-          <ol>
-            <li>In the <b>Explorer</b> left pane, click to expand the <b>assets/text</b> subfolder, and then click to open the file <b>html-snippets.json</b></li>
-            <li>Position the cursor in the <b>html-snippets.json</b> file, then press <b>CTRL+A</b>, and then press <b>CTRL+C</b> to copy the contents of the file.</li>
-            <li>Click the <b>File</b> menu, then click <b>Preferences</b>, and then click <b>Configure Snippets</b></li>
-            <li>In the <b>Select Snippets File</b> field, type <b>HTML</b>, and then press <b>ENTER</b></li>
-            <li>In the <b>html.json</b> file that opens, position the cursor where you want to paste snippet definitions, then press <b>CTRL+V</b>, then edit the file as needed, and then press <b>CTRL+S</b> to save the html.json file.</li>
-          </ol>
-        </li>
-        <li>To set the default Language Mode for files having the MDX file name extension to HTML:
-          <ol>
-            <li>Click the <b>File</b> menu, then click <b>Preferences</b>, and then click <b>Settings</b></li>
-            <li>In the <b>Search Settings</b> field, type <b>files.associations</b></li>
-            <li>In the <b>Files: Associations</b> setting, click the <b>Add Item</b> button. In the <b>Item</b> field type <b>*.mdx</b>, then in the <b>Value</b> field type <b>html</b>, and then click <b>OK</b></li>
-          </ol>
-        </li>
+  <li>To set the default Language Mode for files having the MDX file name extension to HTML:
+    <ol>
+      <li>Click the <b>File</b> menu, then click <b>Preferences</b>, and then click <b>Settings</b></li>
+      <li>In the <b>Search Settings</b> field, type <b>files.associations</b></li>
+      <li>In the <b>Files: Associations</b> setting, click the <b>Add Item</b> button. In the <b>Item</b> field type <b>*.mdx</b>, then in the <b>Value</b> field type <b>html</b>, and then click <b>OK</b></li>
+    </ol>
+  </li>
 </ol>
 
-      <p>For details on using VS Code to submit content that you create to your fork of the CardanoSPOGuide repository, see the section <a href="https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_staging-and-committing-code-changes" target="_blank">Staging and Committing Code Changes</a>.</p>
+<p>For details on using VS Code to submit content that you create to your fork of the EthPillarGuides repository, see the section <a href="https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_staging-and-committing-code-changes" target="_blank">Staging and Committing Code Changes</a>.</p>
