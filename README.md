@@ -88,7 +88,7 @@ npm audit fix</code></li>
   <li>When you are ready to stop the development server, navigate to the terminal window running the development server, and then press <code>CTRL+C</code></li>
 </ol>
 
-<p>When revising the EthPillar guides, you need to know about the following folders and files in the Docusaurus project, relative to the root <code>EthPillarGuides</code> folder:</p>
+<p>When revising EthPillar guides, you need to know about the following folders and files in the Docusaurus project, relative to the root <code>EthPillarGuides</code> folder:</p>
 
 <ul>
   <li><code>/assets/</code>—Contains source files for images; scripts; and, snippets that you may use when revising the guides</li>
