@@ -109,7 +109,7 @@ npm audit fix</code></li>
 <p><strong>To install and configure VS Code:</strong></p>
 
 <ol>
-  <li>Visit <a href="https://code.visualstudio.com/docs/setup/setup-overview" target="_blank">Setting Up Visual Studio Code</a>, and then follow the instructions for your platform.</li>
+  <li>Visit <a href="https://code.visualstudio.com/docs/getstarted/overview" target="_blank">Get Started With Visual Studio Code</a>, and then follow the instructions for your platform.</li>
   <li>After finishing the installation, open VS Code</li>
   <li>In VS Code, click the <b>File</b> menu, then click <b>Open Folder</b>, then navigate to the <b>EthPillarGuides</b> folder, and then click <b>Open</b></li>
   <li>To set the default Language Mode for files having the MDX file name extension to HTML:
