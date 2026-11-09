@@ -108,10 +108,14 @@ npm audit fix</code></li>
 
 <p><strong>To install and configure VS Code:</strong></p>
 
-      <ol>
-        <li>Visit <a href="https://code.visualstudio.com/docs/setup/setup-overview" target="_blank">Setting Up Visual Studio Code</a>, and then follow the instructions for your platform.</li>
-        <li>After finishing the installation, open VS Code</li>
-        <li>In VS Code, click the <b>File</b> menu, then click <b>Open Folder</b>, then navigate to the <b>CardanoSPOGuide</b> folder, and then click <b>Open</b></li>
+<ol>
+  <li>Visit <a href="https://code.visualstudio.com/docs/setup/setup-overview" target="_blank">Setting Up Visual Studio Code</a>, and then follow the instructions for your platform.</li>
+  <li>After finishing the installation, open VS Code</li>
+  <li>In VS Code, click the <b>File</b> menu, then click <b>Open Folder</b>, then navigate to the <b>CardanoSPOGuide</b> folder, and then click <b>Open</b></li>
+
+
+
+  
         <li>To install HTML code snippets for the Guide:
           <ol>
             <li>In the <b>Explorer</b> left pane, click to expand the <b>assets/text</b> subfolder, and then click to open the file <b>html-snippets.json</b></li>
@@ -128,6 +132,6 @@ npm audit fix</code></li>
             <li>In the <b>Files: Associations</b> setting, click the <b>Add Item</b> button. In the <b>Item</b> field type <b>*.mdx</b>, then in the <b>Value</b> field type <b>html</b>, and then click <b>OK</b></li>
           </ol>
         </li>
-      </ol>
+</ol>
 
       <p>For details on using VS Code to submit content that you create to your fork of the CardanoSPOGuide repository, see the section <a href="https://code.visualstudio.com/docs/sourcecontrol/intro-to-git#_staging-and-committing-code-changes" target="_blank">Staging and Committing Code Changes</a>.</p>
