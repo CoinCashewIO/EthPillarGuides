@@ -102,11 +102,11 @@ npm audit fix</code></li>
 
 <p>For details on creating a pull request to submit content that you create to CoinCashew.io for publication in the guides, see the topic <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork" target="_blank">Creating a Pull Request from a Fork</a>.</p>
 
-      <h2>Installing and Configuring Visual Studio Code</h2>
+<h2>Installing and Configuring Visual Studio Code</h2>
 
-      <p>Visual Studio Code (VS Code) is a free, lightweight and powerful source code editor developed by Microsoft for Windows, macOS and Linux. VS Code is highly customizable and user friendly, offering features such as syntax highlighting, intelligent code completion and Git integration.</p>
+<p>Visual Studio Code (VS Code) is a free, lightweight and powerful source code editor developed by Microsoft for Windows, macOS and Linux. VS Code is highly customizable and user friendly, offering features such as syntax highlighting, intelligent code completion and Git integration.</p>
 
-      <p class="pi">To install and configure VS Code:</p>
+<p><strong>To install and configure VS Code:</strong></p>
 
       <ol>
         <li>Visit <a href="https://code.visualstudio.com/docs/setup/setup-overview" target="_blank">Setting Up Visual Studio Code</a>, and then follow the instructions for your platform.</li>
