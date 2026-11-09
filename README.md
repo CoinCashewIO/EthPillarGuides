@@ -57,7 +57,7 @@ npx docusaurus start</code></li>
   <li>If prompted, confirm that you want to stop the development server.</li>
 </ol>
 
-<h2>Downloading and Compiling the Guides</h2>
+<h2>Downloading and Compiling EthPillar Guides</h2>
 
       <p>The <a href="https://github.com/CoinCashewIO/CardanoSPOGuide" target="_blank">CardanoSPOGuide</a> GitHub repository stores the source files for the <i>How to Set Up a Cardano Stake Pool, Version 2.0</i> guide—a fully open-source project fully powered by stake pool operators like you.</p>
 
