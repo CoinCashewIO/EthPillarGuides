@@ -16,7 +16,7 @@
 
 <p>Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a Web browser.</p>
 
-<p class="pi">To install Node.js:</p>
+<p><strong>To install Node.js:</strong></p>
 
 <ul class="ss">
   <li>Using a Web browser, visit the <a href="https://nodejs.org/en/download/" target="_blank">Download Node.js</a> page. In the dropdown fields, select a Node.js Long-Term Support (LTS) version 18.0 or above for your operating system using <b>nvm</b> with <b>npm</b>, and then follow the instructions that the Download page displays.<center><strong>OR</strong></center>Download a prebuilt Node.js installer for your operating system, then run then installer, and then follow the instructions on screen to complete the installation.</li>
