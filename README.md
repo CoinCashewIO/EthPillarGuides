@@ -70,8 +70,8 @@ sudo apt-get install git</code><br />
     <div align="center"><strong>OR</strong></div>
     If you are using Windows, <a href="https://git-scm.com/downloads" target="_blank">download</a> a Standalone Installer, then run the EXE file that you downloaded, and then follow the instructions on screen to complete the installation.</li>
   <li>To configure Git, using a terminal window type the following commands where <code>&lt;UserName&gt;</code> is your Git user name, and <code>&lt;EmailAddress&gt;</code> is your e-mail address:<br />
-    <code>git config --global user.name "<UserName>"
-git config --global user.email "<EmailAddress>"</code> </li>
+    <code>git config --global user.name "&lt;UserName&gt;"
+git config --global user.email "&lt;EmailAddress&gt;"</code> </li>
 
 > [!NOTE]
 > To display the current user name or e-mail address, type <code>git config --global user.name</code> or <code>git config --global user.email</code> respectively.
