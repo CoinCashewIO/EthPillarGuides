@@ -28,7 +28,7 @@
 
 <p>The simplest method of installing Docusaurus involves creating a new project Web site using a default template.</p>
 
-<p class="pi">To install Docusaurus:</p>
+<p><strong>To install Docusaurus:</strong></p>
 
 <ol>
   <li>Using a terminal window, navigate to the folder where you want to store Docusaurus project Web sites, such as the EthPillar guides.</li>
