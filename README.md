@@ -76,27 +76,20 @@ git config --global user.email "&lt;EmailAddress&gt;"</code> </li>
 > [!NOTE]
 > To display the current user name or e-mail address, type <code>git config --global user.name</code> or <code>git config --global user.email</code> respectively.
 
-
-
-
-
-
-
-
-  
-        <li>Using a Web browser, log in to your <a href="https://github.com/" target="_blank">GitHub</a> account.</li>
-        <li>Navigate to the <a href="https://github.com/CoinCashewIO/CardanoSPOGuide" target="_blank">CardanoSPOGuide</a> repository, then click the <b>Fork</b> button, and then scroll down to click the green <b>Create Fork</b> button.</li>
-
-        <li>Using a terminal window, navigate to the folder on your computer where you store Docusaurus project Web sites, and then type the following commands where <code>&lt;ForkedRepository&gt;</code> is the URL to the fork of the CardanoSPOGuide repository that you created in step 4:
-          <CodeBlock language="bash">
-            {`git clone <ForkedRepository>
-cd ./CardanoSPOGuide
+  <li>Using a Web browser, log in to your <a href="https://github.com/" target="_blank">GitHub</a> account.</li>
+  <li>Navigate to the <a href="https://github.com/CoinCashewIO/EthPillarGuides" target="_blank">EthPillarGuides</a> repository, then click the <b>Fork</b> button, and then scroll down to click the green <b>Create Fork</b> button.</li>
+  <li>Using a terminal window, navigate to the folder on your computer where you store Docusaurus project Web sites, and then type the following commands where <code>&lt;ForkedRepository&gt;</code> is the URL to the fork of the EthPillarGuides repository that you created in step 4:<br />
+    <code>git clone &lt;ForkedRepository&gt;
+cd ./EthPillarGuides
 npm install
 npm update
-npm audit fix
-`}
-          </CodeBlock>
-        </li>
+npm audit fix</code></li>
+
+
+
+
+
+
         <li>To start the development server for the Guide, type <code>npx docusaurus start</code></li>
         <li>When you are ready to stop the development server, navigate to the terminal window running the development server, and then press <code>CTRL+C</code></li>
       </ol>
