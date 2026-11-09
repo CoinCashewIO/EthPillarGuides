@@ -30,14 +30,14 @@
 
 <ol>
   <li>Using a terminal window, navigate to the folder where you want to store Docusaurus project Web sites, such as the EthPillar guides.</li>
-  <li>To create a new Docusaurus project Web site, type the following command where <code>&lt;WebsiteName&gt;</code> is the name of the new project: <code>npx create-docusaurus@latest &lt;WebsiteName&gt; classic</code></li>
+  <li>To create a new Docusaurus project Web site, type the following command where <code>&lt;WebsiteName&gt;</code> is the name of the new project:
+    <code>npx create-docusaurus@latest &lt;WebsiteName&gt; classic</code>
+  </li>
   <li>When prompted to install the <code>create-docusaurus</code> package, type <code>y</code> and then press <code>ENTER</code>to proceed.</li>
   <li>When prompted to select a language, select <code>JavaScript</code> and then press <code>ENTER</code></li>
   <li>When the installation completes, to start the development server for the new project Web site, type:
-    <CodeBlock language="bash">
-      {`cd ./<WebsiteName>
-npx docusaurus start`}
-    </CodeBlock>
+    <code>cd ./<WebsiteName>
+npx docusaurus start</code>
   </li>
 </ol>
 
