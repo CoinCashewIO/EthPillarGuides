@@ -59,33 +59,31 @@ npx docusaurus start</code></li>
 
 <h2>Downloading and Compiling EthPillar Guides</h2>
 
-<p>The <a href="https://github.com/CoinCashewIO/CardanoSPOGuide" target="_blank">EthPillarGuides</a> GitHub repository stores the source files for the <i>How to Set Up a Cardano Stake Pool, Version 2.0</i> guide—a fully open-source project fully powered by stake pool operators like you.</p>
+<p>The <a href="https://github.com/CoinCashewIO/EthPillarGuides" target="_blank">EthPillarGuides</a> GitHub repository stores the source files for EthPillar guides—a fully open-source project fully powered by Ehtereum node operators like you.</p>
 
-      <p class="pi">To download and compile the Guide:</p>
+<p><strong>To download and compile EthPillar guides:</strong></p>
 
-      <ol>
-        <li>To install Git, if you are using Linux then type the following commands using a terminal window:
-          <CodeBlock language="bash">
-            {`sudo apt-get update
-sudo apt-get install git`}
-          </CodeBlock>
-          <center><strong>OR</strong></center>
-          If you are using Windows, <a href="https://git-scm.com/downloads" target="_blank">download</a> a Standalone Installer, then run the EXE file that you downloaded, and then follow the instructions on screen to complete the installation.
-        </li>
-        <li>To configure Git, using a terminal window type the following commands where <code>&lt;UserName&gt;</code> is your Git user name, and <code>&lt;EmailAddress&gt;</code> is your e-mail address:
-          <CodeBlock language="bash">
-            {`git config --global user.name "<UserName>"
-git config --global user.email "<EmailAddress>"`}
-          </CodeBlock>
-          <table class="box">
-            <tbody>
-              <tr>
-                <td class="boxLabel"><p class="boxLabel">Note<br /><img src={useBaseUrl('img/BoxNote.png')} alt="Note" /></p></td>
-                <td class="boxText"><p class="boxText">To display the current user name or e-mail address, type <code>git config --global user.name</code> or <code>git config --global user.email</code> respectively.</p></td>
-              </tr>
-            </tbody>
-          </table>
-        </li>
+<ol>
+  <li>To install Git, if you are using Linux then type the following commands using a terminal window:<br />
+    <code>sudo apt-get update
+sudo apt-get install git</code><br />
+    <div align="center"><strong>OR</strong></div>
+    If you are using Windows, <a href="https://git-scm.com/downloads" target="_blank">download</a> a Standalone Installer, then run the EXE file that you downloaded, and then follow the instructions on screen to complete the installation.</li>
+  <li>To configure Git, using a terminal window type the following commands where <code>&lt;UserName&gt;</code> is your Git user name, and <code>&lt;EmailAddress&gt;</code> is your e-mail address:<br />
+    <code>git config --global user.name "<UserName>"
+git config --global user.email "<EmailAddress>"</code>
+
+> [!NOTE]
+> To display the current user name or e-mail address, type <code>git config --global user.name</code> or <code>git config --global user.email</code> respectively.
+
+  </li>
+
+
+
+
+
+
+  
         <li>Using a Web browser, log in to your <a href="https://github.com/" target="_blank">GitHub</a> account.</li>
         <li>Navigate to the <a href="https://github.com/CoinCashewIO/CardanoSPOGuide" target="_blank">CardanoSPOGuide</a> repository, then click the <b>Fork</b> button, and then scroll down to click the green <b>Create Fork</b> button.</li>
 
