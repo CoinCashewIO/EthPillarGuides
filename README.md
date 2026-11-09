@@ -111,7 +111,7 @@ npm audit fix</code></li>
 <ol>
   <li>Visit <a href="https://code.visualstudio.com/docs/setup/setup-overview" target="_blank">Setting Up Visual Studio Code</a>, and then follow the instructions for your platform.</li>
   <li>After finishing the installation, open VS Code</li>
-  <li>In VS Code, click the <b>File</b> menu, then click <b>Open Folder</b>, then navigate to the <b>CardanoSPOGuide</b> folder, and then click <b>Open</b></li>
+  <li>In VS Code, click the <b>File</b> menu, then click <b>Open Folder</b>, then navigate to the <b>EthPillarGuides</b> folder, and then click <b>Open</b></li>
 
 
 
